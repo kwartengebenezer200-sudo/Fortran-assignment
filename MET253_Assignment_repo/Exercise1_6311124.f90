@@ -1,0 +1,32 @@
+!6311124
+PROGRAM EXAM_RESULTS
+   IMPLICIT NONE
+   INTEGER :: R              !R = RESULTS OF STUDENTS
+   INTEGER :: i
+   
+   DO i= 1,10
+   PRINT*, 'PLEASE ENTER RESULTS', R
+   READ*, R(i)
+   
+   END DO
+   
+   PRINT*,'PLEASE ENTER RESULT'
+   
+  IF ((R>= 80).AND.(R<=100)) THEN
+    PRINT*, 'A'
+  ELSE IF ((R>=60).AND.(R<=79)) THEN
+    PRINT*, 'B'
+  ELSE IF ((R>=40).AND.(R<=59)) THEN
+    PRINT*, 'C'
+  ELSE 
+    PRINT*, 'F'
+  ELSE
+    
+  END IF  
+   
+  DO R(i)
+  
+  END DO
+  
+  
+END PROGRAM EXAM_RESULTS

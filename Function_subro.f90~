@@ -1,0 +1,18 @@
+Program add
+  IMPLICICT NONE
+  REAL: radius,Area
+  REAL,PARAMETER:: pi=3.142
+  
+  PRINT*,'ENTER RADIUS: '
+  READ*,radius
+  Area = area_of_circle(radius,pi)
+  PRINT*, 'Area of a circle is 'Area
+  
+End Program add
+
+REAL FUNCTION area_of_circle(r,p)
+  IMPLICIT NONE
+  REAL:: r,ac
+  REAL,PARAMETER::p
+  ac = p*r**2
+END FUNCTION area_of_circle

@@ -1,0 +1,11 @@
+Program Array
+  implicit none
+  real, dimension(6)::a
+  a(1) = 6
+  a(2) = 7
+  a(3) = 8
+  a(4) = 9
+  a(5) = 10
+  a(6) = 11
+  print*,a
+End Program Array

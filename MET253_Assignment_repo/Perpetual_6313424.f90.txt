@@ -1,0 +1,50 @@
+PROGRAM maths
+IMPLICIT NONE
+INTEGER,DIMENSION(10)::Students_scores=(/85,62,45,91,38,74,55,88,61,47/)
+CHARACTER(1),DIMENSION(10)::Students_grades
+PRINT*,'A'
+IF 79>Score<60,
+PRINT*,'B'
+IF 40>Score<59,
+PRINT*,'C'
+IF 39>Score<0,
+PRINT*,'F
+END PROGRAM maths
+!Perpetual Nyamaa Sam _6313424
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'
+
+
+
+
+
+
+
+
+
+
+

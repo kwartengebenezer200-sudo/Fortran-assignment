@@ -1,0 +1,26 @@
+PROGRAM veronica
+!Amponsah Veronica
+!6306924
+IMPLICIT NONE
+REAL,demension(10::b
+INTEGER::5,5
+DO i=1,6
+INTEGER::i
+REAL::A,B,C,F
+!b=(/85,65,45,91,38,74,55,88,61,47/)
+DOi=(1,10)
+READ*,b
+END DO
+IF(100>=b).AND.(b>=80)THEN
+PRINT*A'distintion'
+ELSE,
+IF(79>=b).AND.(b>=60)THEN
+PRINT*B,'credit'
+ELSE,
+IF(59>=b).AND.(>=40)THEN
+PRINT*C,'PASS'
+ELSE,
+IF(b<=49)THEN[
+PRINT*F,'FAIL'
+END IF
+END PROGRAM veronica

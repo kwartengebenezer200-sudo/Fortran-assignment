@@ -1,0 +1,15 @@
+PROGRAM MATHS
+IMPLICIT NONE
+REAL::students number,scores
+INTEGER:;students (10)
+students 1 (85)
+
+
+
+
+
+
+
+
+
+

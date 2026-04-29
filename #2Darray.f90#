@@ -1,0 +1,12 @@
+Program D2
+  implicit none
+  real, dimension(2,2) :: b
+  integer::row,col
+  
+  Do row = 1,2
+     Do col=1,2
+        read*, b(row,col)
+     End do
+  End do
+  print*,b
+End Program D2

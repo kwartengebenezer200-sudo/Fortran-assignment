@@ -1,0 +1,38 @@
+program read_netcdf
+  use netcdf
+  implicit none
+
+  integer :: ncid, varid, dimid
+  integer :: status
+  integer :: nx, ny
+  real, allocatable :: data(:,:)
+
+  ! 1. Open the file
+  status = nf90_open("myfile.nc", NF90_NOWRITE, ncid)
+  if (status /= NF90_NOERR) stop "Error opening file"
+
+  ! 2. Get dimension IDs and sizes
+  status = nf90_inq_dimid(ncid, "lon", dimid)
+  status = nf90_inquire_dimension(ncid, dimid, len=nx)
+
+  status = nf90_inq_dimid(ncid, "lat", dimid)
+  status = nf90_inquire_dimension(ncid, dimid, len=ny)
+
+  ! 3. Allocate array
+  allocate(data(nx, ny))
+
+  ! 4. Get variable ID
+  status = nf90_inq_varid(ncid, "temperature", varid)
+  if (status /= NF90_NOERR) stop "Error finding variable"
+
+  ! 5. Read the variable
+  status = nf90_get_var(ncid, varid, data)
+  if (status /= NF90_NOERR) stop "Error reading variable"
+
+  ! 6. Close the file
+  status = nf90_close(ncid)
+
+  print*, "Min:", minval(data), "Max:", maxval(data)
+  deallocate(data)
+
+end program read_netcdf

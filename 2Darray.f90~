@@ -1,0 +1,10 @@
+Program 2D
+  implicit none
+  real, dimension(2,2) :: b
+  Do i = 1,2
+     Do j,1,2
+        read*, b(i,j)
+     End do
+  End do
+  print*,b
+End Program 2D
